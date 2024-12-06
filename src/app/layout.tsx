@@ -5,9 +5,9 @@ import { Inter } from "next/font/google"
 import type { PropsWithChildren } from "react"
 
 import { isDevelopment } from "@/libs/config"
+import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import clsx from "clsx"
 import type { Metadata } from "next"
-import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 
 export const metadata: Metadata = {
   title: "Next.js Starter",
