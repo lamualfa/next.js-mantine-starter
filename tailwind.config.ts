@@ -1,8 +1,10 @@
+import mantinePlugin from "@devoss/tailwind-plugin-mantine"
 import scrollbarPlugin from "tailwind-scrollbar"
 import type { Config } from "tailwindcss"
 // @ts-ignore
 import debugScreensPlugin from "tailwindcss-debug-screens"
 import defaultTheme from "tailwindcss/defaultTheme"
+import { theme } from "./src/libs/theme"
 
 export default {
   content: ["./src/components/**/*.{ts,tsx}", "./src/app/**/*.{ts,tsx}"],
@@ -16,5 +18,5 @@ export default {
       position: ["bottom", "right"],
     },
   },
-  plugins: [debugScreensPlugin, scrollbarPlugin],
+  plugins: [debugScreensPlugin, scrollbarPlugin, mantinePlugin(theme)],
 } satisfies Config
