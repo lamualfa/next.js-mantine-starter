@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 import type { PropsWithChildren } from "react"
 
 import { isDevelopment } from "@/libs/config"
+import { theme } from "@/libs/theme"
 import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import clsx from "clsx"
 import type { Metadata } from "next"
@@ -33,7 +34,7 @@ export default function RootLayout(props: RootLayoutProps) {
           isDevelopment && "debug-screens",
         )}
       >
-        <MantineProvider>{props.children}</MantineProvider>
+        <MantineProvider theme={theme}>{props.children}</MantineProvider>
       </body>
     </html>
   )
