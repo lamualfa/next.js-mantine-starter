@@ -1,9 +1,13 @@
 pre-commit:
+  piped: true
   commands:
-    check:
-      glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}'
-      run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --organize-imports-enabled=true {staged_files}
+    format:
+      run: qlty fmt
       stage_fixed: true
+    check:
+      run: qlty check --no-upgrade-check
+    smells:
+      run: qlty smells
 commit-msg:
   commands:
     lint:
