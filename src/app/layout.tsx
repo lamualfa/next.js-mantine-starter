@@ -19,7 +19,7 @@ const interFont = Inter({
   variable: "--font-inter",
 })
 
-interface RootLayoutProps extends PropsWithChildren {}
+type RootLayoutProps = PropsWithChildren
 
 export default function RootLayout(props: RootLayoutProps) {
   return (

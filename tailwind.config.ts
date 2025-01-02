@@ -1,7 +1,7 @@
 import mantinePlugin from "@devoss/tailwind-plugin-mantine"
 import scrollbarPlugin from "tailwind-scrollbar"
 import type { Config } from "tailwindcss"
-// @ts-ignore
+// @ts-expect-error tailwindcss-debug-screens doesn't have declaration types
 import debugScreensPlugin from "tailwindcss-debug-screens"
 import defaultTheme from "tailwindcss/defaultTheme"
 import { theme } from "./src/libs/theme"

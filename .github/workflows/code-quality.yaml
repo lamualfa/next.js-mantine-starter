@@ -1,8 +1,13 @@
+# yamllint disable-line rule:new-lines
+---
 name: Code quality
 
+# yamllint disable-line rule:truthy
 on:
   push:
   pull_request:
+
+permissions: read-all
 
 jobs:
   quality:
